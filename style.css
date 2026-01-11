@@ -1,0 +1,63 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;   
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4d7973;
+    color: white;
+    text-align: center;
+    min-height: 220px;
+}
+
+.nav-button {
+    padding: 15px 30px;
+    background-color: white;
+    color: #4d7973;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+.logo-container img {
+
+  width: 150px; /* Set a specific width */
+  height: auto; /* Height scales proportionally */
+}
+
+.rounded-box {
+    border-radius: 25px; /* Adjust the pixel value to change the roundness */
+    background-color: rgb(245, 162, 254); /* Example background color */
+    padding: 20px; /* Space between the text and the border */
+    width: 200px; /* Example width */
+    border: 2px solid #f8ceff; /* Example border */
+}
+
+.grid-container {
+    display: grid;
+    /* Creates four columns of equal width */
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 10px; /* Adds space between grid items */
+    place-items: center; /* Centers items both horizontally and vertically within their grid area */
+    height: 200px; /* Example height for demonstration */
+}
+
+
+header {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 380px;            /* Example height */
+}
+
+headerAbout {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 200px;            /* Example height */
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Welcome! </title>
+    <style>
+  body {
+    background-image: url("Images/Screenshot 2026-01-10 at 4.03.00 PM.png"); /* Specify the image path */
+    background-repeat: no-repeat;            /* Prevents the image from tiling */
+    background-size: cover;                  /* Scales image to cover the entire container */
+    background-attachment: fixed;            /* Keeps image fixed while scrolling */
+    background-position: center;             /* Centers the image in the viewport */
+    background-color: #454343;               /* Fallback color if the image doesn't load */
+  }
+
+</style>
+</head>
+<header>
+<div class="logo-container"><img src="Images/Group 3.PNG" alt="website logo"></div>
+</header>
+
+<body>
+    <div class - "button-container">
+        <a href="Index.html" class = "nav-button">Home</a>
+        <a href = "about.html" class = "nav-button">About</a>
+        <a href = "todo list.html" class = "nav-button">To Do List</a>
+    </div>
+
+</head>
+
+
+<div class="container">
+    <h1>To-Do List</h1>
+
+<!-- Dropdown -->
+    <select id="taskSelect">
+    <option value="">Choose a task</option>
+    <option value="Feed the cat">Feed the cat</option>
+    <option value="Clean litter box">Clean litter box</option>
+    <option value="Play with cat">Play with cat</option>
+</select>
+
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+</div>
+
+<footer>
+<p>jellykitties2026</p>
+</footer>
+
+
+<script>
+const taskSelect = document.getElementById("taskSelect");
+const taskList = document.getElementById("taskList");
+
+function addTask() {
+    const taskText = taskSelect.value;
+
+    if (taskText === "") {
+    alert("Please select a task!");
+    return;
+}
+
+const li = document.createElement("li");
+li.textContent = taskText;
+
+const deleteButton = document.createElement("button");
+deleteButton.textContent = "Complete";
+deleteButton.addEventListener("click", () => {
+deleteTask(li);
+});
+
+li.appendChild(deleteButton);
+taskList.appendChild(li);
+}
+
+function deleteTask(taskElement) {
+taskList.removeChild(taskElement);
+}
+</script>
+
+</body>
+<link rel="stylesheet" href="css/style.css">
+</html>
